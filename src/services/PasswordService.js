@@ -18,7 +18,7 @@ export class PasswordService{
     }
     // store our own symbol selections in a variable then randomize
     static getRandomSymbols() {
-        let symbolString = `!@#$%^&*(){}[]/`;
+        let symbolString = `!@#$%^&*/`;
         return symbolString[Math.floor(Math.random() * symbolString.length)];
     }
 
@@ -40,7 +40,7 @@ export class PasswordService{
 
     static generatePassword(passwordObj , passwordLength) {
         let password = '';
-    // loop as many times as user declares password length and increment passwordObject if user checked the box
+    // loop as many times as user declares password length and increment passwordObject with characters
         for(let i = 0; i < Number(passwordLength); i+= Object.keys(passwordObj).length) {
             // if passwordObj contains lower, get random lowercase and add to generated password and so forth.
             if(passwordObj.lower) password += `${this.getRandomLowerCase()}`;

@@ -1,8 +1,8 @@
 import React from 'react';
-import './App.css';
 import PasswordGenerator from "./components/PasswordGenerator";
 
-let App = () => {
+
+const App = () => {
   return (
     <React.Fragment>
       <PasswordGenerator/>
